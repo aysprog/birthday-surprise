@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Your Name">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+    <meta name="description" content="An interactive birthday surprise website.">
+    <meta name="theme-color" content="#FCEB9A">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="icon" href="assets/icons/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="animations.css">
+
+
+</head>
+
+<body>
+    <div id="loader">
+
+        <div class="loader-box">
+
+            <div class="loader-giraffe">
+
+                🦒
+
+            </div>
+
+            <h2>
+
+                Preparing your surprise...
+
+            </h2>
+
+            <div class="loader-bar">
+
+                <span></span>
+
+            </div>
+
+        </div>
+
+    </div>
+    <main id="app">
+        <section class="page active" id="welcome-page">
+            <div class="paper-card">
+                <div class="corner top-left"></div>
+                <div class="corner bottom-right"></div>
+                <div class="giraffe">
+                    <img src="/assets/giraffe.svg" alt="Cute Giraffe">
+                </div>
+                <h1>
+                    Hey! ❤️
+                </h1>
+                <h2>
+                    I made something just for you...
+                </h2>
+                <p>
+                    It's been made with lots of love,
+                    cute animations,
+                    and little surprises.
+                    I hope you'll enjoy every page.
+                </p>
+                <div class="button-group">
+                    <button id="startButton" class="primary-btn">
+                        Let's Go ✨
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="page" id="question-page">
+            <div class="paper-card">
+                <div class="giraffe-small">
+                    <img src="/assets/giraffe.svg" alt="Giraffe">
+                </div>
+                <h2>
+                    Before we continue...
+                </h2>
+                <p>
+                    Will you promise to smile
+                    while looking at this little surprise?
+                </p>
+                <div class="question-buttons">
+                    <button id="yesButton" class="primary-btn">
+                        YES 💜
+                    </button>
+                    <button id="noButton" class="secondary-btn">
+                        NO 🙈
+                    </button>
+                </div>
+                <p id="funnyText">
+                </p>
+            </div>
+        </section>
+        <section class="page" id="birthday-page">
+            <div class="paper-card">
+                <div class="page-number">
+                    01
+                </div>
+                <div class="birthday-stars"></div>
+                <div class="birthday-photo">
+                    <div class="photo-frame">
+                        <img src="/assets/1" alt="Birthday">
+                    </div>
+                </div>
+                <h1 class="birthday-title">
+                    Happy Birthday ❤️
+                </h1>
+                <p id="typingText" class="typing-text"></p>
+                <div class="next-area">
+                    <button class="next-btn" data-next="cake-page">
+                        Continue →
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="cake-page">
+            <div class="paper-card">
+                <div class="cake-container">
+                    <img src="/assets/cake.svg" alt="Birthday Cake">
+                </div>
+                <h2>
+                    Make a Wish ✨
+                </h2>
+                <p>
+                    Close your eyes...
+                    Make your biggest wish...
+                    Then press Continue.
+                </p>
+                <button class="next-btn" data-next="gift-page">
+                    I Made My Wish ❤️
+                </button>
+            </div>
+        </section>
+        <section class="page" id="gift-page">
+            <div class="paper-card">
+                <h2>
+                    Choose a Gift 🎁
+                </h2>
+                <p>
+                    Every gift hides something special.
+                </p>
+                <div class="gift-grid">
+                    <div class="gift-box" data-gift="1">
+                        <img src="/assets/gift1.svg" alt="Gift One">
+                        <span>
+                            Gift One
+                        </span>
+                    </div>
+                    <div class="gift-box" data-gift="2">
+                        <img src="/assets/gift2.svg" alt="Gift Two">
+                        <span>
+                            Gift Two
+                        </span>
+                    </div>
+                    <div class="gift-box" data-gift="3">
+                        <img src="/assets/gift3.svg" alt="Gift Three">
+                        <span>
+                            Gift Three
+                        </span>
+                    </div>
+                </div>
+                <div class="gift-message">
+                    <h3>
+                        Surprise ❤️
+                    </h3>
+                    <p id="giftMessage">
+                        Click any gift to reveal it.
+                    </p>
+                </div>
+                <button class="next-btn" data-next="gallery-page">
+                    Continue →
+                </button>
+            </div>
+        </section>
+        <section class="page" id="gallery-page">
+            <div class="paper-card large">
+                <h2>
+                    Our Beautiful Memories 📸
+                </h2>
+                <p>
+                    Replace these pictures with your own.
+                </p>
+                <div class="gallery-grid">
+                    <figure>
+                        <img src="assets/photos/photo1.jpg" alt="Photo 1">
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/photo2.jpg" alt="Photo 2">
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/photo3.jpg" alt="Photo 3">
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/photo4.jpg" alt="Photo 4">
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/photo5.jpg" alt="Photo 5">
+                    </figure>
+                    <figure>
+                        <img src="assets/photos/photo6.jpg" alt="Photo 6">
+                    </figure>
+                </div>
+                <div class="next-area">
+                    <button class="next-btn" data-next="letter-page">
+                        Read My Letter ❤️
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="page" id="letter-page">
+            <div class="paper-card letter-card">
+                <div class="letter-header">
+                    <h2>
+                        💌 A Letter For You
+                    </h2>
+                </div>
+                <div class="letter-body">
+                    <p id="typewriterLetter">
+                        Dear Friend,
+                    </p>
+                    <div class="signature">
+                        ❤️ With Love
+                    </div>
+                </div>
+                <button class="next-btn" data-next="ending-page">
+                    Continue →
+                </button>
+            </div>
+        </section>
+        <section class="page" id="ending-page">
+            <div class="paper-card final-card">
+                <div class="confetti-container"></div>
+                <div class="ending-stars"></div>
+                <div class="ending-heart">
+                    ❤️
+                </div>
+                <h1>
+                    Happy Birthday!
+                </h1>
+                <p>
+                    I hope every moment of your life
+                    becomes more beautiful than today.
+                </p>
+                <p>
+                    Thank you for being such
+                    an amazing person.
+                </p>
+                <div class="ending-image">
+                    <img src="/assets/giraffe.svg" alt="Cute Giraffe">
+                </div>
+                <button id="restartWebsite" class="primary-btn">
+                    Watch Again
+                </button>
+            </div>
+        </section>
+        <div id="giftPopup" class="popup">
+            <div class="popup-content">
+                <button class="closePopup">
+                    ✕
+                </button>
+                <div id="popupText"></div>
+            </div>
+        </div>
+        <div id="galleryViewer">
+            <button id="closeViewer">
+                ✕
+            </button>
+            <img id="viewerImage" src="" alt="Preview">
+        </div>
+        <div class="floating-hearts"></div>
+        <div class="floating-stars"></div>
+        <div class="floating-clouds"></div>
+        <div class="floating-flowers"></div>
+        <div class="sparkles"></div>
+        <div class="butterflies"></div>
+        <svg width="0" height="0" style="position:absolute">
+            <defs>
+                <filter id="shadow">
+                    <feDropShadow dx="0" dy="5" stdDeviation="5" flood-opacity=".25" />
+                </filter>
+            </defs>
+        </svg>
+    </main>
+    <script src="script.js"></script>
+
+<!---  <script src="js/gallery.js"></script>  
+    -->  
+
+</body>
+
+</html>

@@ -1,0 +1,1140 @@
+:root {
+
+    --ease: cubic-bezier(.22, .61, .36, 1);
+
+    --fast: .25s;
+
+    --normal: .45s;
+
+    --slow: .8s;
+
+}
+
+.page {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(40px);
+
+    transition:
+
+        opacity .6s var(--ease),
+
+        transform .6s var(--ease),
+
+        visibility .6s;
+
+}
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.fade-in {
+
+    animation: fadeIn .8s forwards;
+
+}
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+.fade-out {
+
+    animation: fadeOut .5s forwards;
+
+}
+
+@keyframes fadeOut {
+
+    from {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        opacity: 0;
+
+    }
+
+}
+
+.slide-left {
+
+    animation: slideLeft .8s forwards;
+
+}
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+.slide-right {
+
+    animation: slideRight .8s forwards;
+
+}
+
+@keyframes slideRight {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-80px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+.pop {
+
+    animation: pop .5s;
+
+}
+
+@keyframes pop {
+
+    0% {
+
+        transform: scale(.8);
+
+    }
+
+    60% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+.float {
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-18px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.bounce {
+
+    animation: bounce 1.8s infinite;
+
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    40% {
+
+        transform: translateY(-18px);
+
+    }
+
+    60% {
+
+        transform: translateY(-10px);
+
+    }
+
+}
+
+.shake {
+
+    animation: shake .45s;
+
+}
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-6px);
+    }
+
+    40% {
+        transform: translateX(6px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+.heartbeat {
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    25% {
+
+        transform: scale(1.12);
+
+    }
+
+    50% {
+
+        transform: scale(.95);
+
+    }
+
+    75% {
+
+        transform: scale(1.08);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+.floating-stars{
+
+    overflow:hidden;
+
+}
+
+.floating-stars::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        radial-gradient(circle,#ffffff 2px,transparent 2px),
+        radial-gradient(circle,#FFE45E 2px,transparent 2px),
+        radial-gradient(circle,#ffffff 1px,transparent 1px);
+
+    background-size:
+        180px 180px,
+        250px 250px,
+        120px 120px;
+
+    animation:twinkle 7s linear infinite;
+
+    opacity:.9;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.7;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-20px);
+
+        opacity:.7;
+
+    }
+
+}
+.floating-clouds{
+
+    overflow:hidden;
+
+}
+
+.floating-clouds::after{
+
+    content:"☁ ☁ ☁ ☁";
+
+    position:absolute;
+
+    top:40px;
+
+    left:-250px;
+
+    font-size:45px;
+
+    opacity:.35;
+
+    white-space:nowrap;
+
+    animation:cloudMove 40s linear infinite;
+
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        left:-250px;
+
+    }
+
+    to{
+
+        left:110%;
+
+    }
+
+}
+
+.floating-flowers{
+
+    overflow:hidden;
+
+}
+
+.floating-flowers::after{
+
+    content:"🌸 🌼 🌷 🌺 🌻";
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:0;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:28px;
+
+    letter-spacing:30px;
+
+    animation:flowerFloat 6s ease-in-out infinite;
+
+}
+
+@keyframes flowerFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+.sparkles{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.sparkles::before,
+
+.sparkles::after{
+
+    content:"✨";
+
+    position:absolute;
+
+    font-size:20px;
+
+    animation:sparkle 4s infinite;
+
+}
+
+.sparkles::before{
+
+    top:15%;
+
+    left:12%;
+
+}
+
+.sparkles::after{
+
+    bottom:20%;
+
+    right:14%;
+
+    animation-delay:2s;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.3) rotate(0deg);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.2) rotate(180deg);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(.3) rotate(360deg);
+
+    }
+
+}
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-180px;
+
+    font-size:60px;
+
+    animation:balloonUp 15s linear infinite;
+
+}
+
+.balloon:nth-child(2){
+
+    left:20%;
+
+    animation-delay:2s;
+
+}
+
+.balloon:nth-child(3){
+
+    left:45%;
+
+    animation-delay:5s;
+
+}
+
+.balloon:nth-child(4){
+
+    left:70%;
+
+    animation-delay:8s;
+
+}
+
+@keyframes balloonUp{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-140vh);
+
+    }
+
+}
+
+.gift-box{
+
+    animation:giftIdle 3s ease-in-out infinite;
+
+}
+
+.gift-box:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.gift-box:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+@keyframes giftIdle{
+
+    0%,100%{
+
+        transform:rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:rotate(-2deg);
+
+    }
+
+    75%{
+
+        transform:rotate(2deg);
+
+    }
+
+}
+
+.gallery-grid figure{
+
+    animation:photoFloat 5s ease-in-out infinite;
+
+}
+
+.gallery-grid figure:nth-child(even){
+
+    animation-delay:2s;
+
+}
+
+@keyframes photoFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+
+.letter-card{
+
+    animation:letterAppear .8s var(--ease);
+
+}
+
+@keyframes letterAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateY(40px)
+
+        rotate(-4deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateY(0)
+
+        rotate(0deg);
+
+    }
+
+}
+
+.glow{
+
+    animation:glow 2.5s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+    0%,100%{
+
+        filter:drop-shadow(0 0 0 rgba(255,255,255,.4));
+
+    }
+
+    50%{
+
+        filter:drop-shadow(0 0 20px rgba(255,255,255,.9));
+
+    }
+
+}
+
+.rotateSlow{
+
+    animation:rotateSlow 18s linear infinite;
+
+}
+
+@keyframes rotateSlow{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+.gift-open{
+
+    animation:giftOpen .8s forwards;
+
+}
+
+@keyframes giftOpen{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    35%{
+
+        transform:scale(.9);
+
+    }
+
+    60%{
+
+        transform:rotate(-8deg) scale(1.1);
+
+    }
+
+    100%{
+
+        transform:rotate(0) scale(1);
+
+    }
+
+}
+
+.gift-pop{
+
+    animation:giftPop .55s;
+
+}
+
+@keyframes giftPop{
+
+    0%{
+
+        transform:scale(.4);
+
+        opacity:0;
+
+    }
+
+    70%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+.flying-heart{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    animation:flyHeart 3s linear forwards;
+
+}
+
+@keyframes flyHeart{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+        translateY(0)
+
+        scale(.5);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+        translateY(-220px)
+
+        rotate(25deg)
+
+        scale(1.4);
+
+    }
+
+}
+
+.ripple{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:scale(0);
+
+    animation:ripple .7s linear;
+
+}
+
+@keyframes ripple{
+
+    to{
+
+        transform:scale(18);
+
+        opacity:0;
+
+    }
+
+}
+
+.cake-container{
+
+    animation:cakeIdle 4s ease-in-out infinite;
+
+}
+
+@keyframes cakeIdle{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+.candle-flame{
+
+    transform-origin:center bottom;
+
+    animation:flicker .18s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+    from{
+
+        transform:
+
+        rotate(-2deg)
+
+        scaleY(1);
+
+    }
+
+    to{
+
+        transform:
+
+        rotate(2deg)
+
+        scaleY(.92);
+
+    }
+
+}
+
+.giraffe img{
+
+    animation:
+
+    floatGiraffe 4s ease-in-out infinite,
+
+    blink 7s infinite;
+
+}
+
+@keyframes blink{
+
+    0%{
+
+        filter:none;
+
+    }
+
+    98%{
+
+        filter:none;
+
+    }
+
+    99%{
+
+        filter:brightness(.96);
+
+    }
+
+    100%{
+
+        filter:none;
+
+    }
+
+}
+
+.paper-card{
+
+    animation:cardFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+.shine{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.6),
+
+        transparent
+
+    );
+
+}
+
+.shine:hover::before{
+
+    animation:shineMove 1s;
+
+}
+
+@keyframes shineMove{
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+.gallery-grid figure:hover img{
+
+    animation:photoFlash .5s;
+
+}
+
+@keyframes photoFlash{
+
+    0%{
+
+        filter:brightness(1);
+
+    }
+
+    50%{
+
+        filter:brightness(1.45);
+
+    }
+
+    100%{
+
+        filter:brightness(1);
+
+    }
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+.page-flip{
+
+    animation:pageFlip .8s;
+
+}
+
+@keyframes pageFlip{
+
+    from{
+
+        transform:
+
+        perspective(1200px)
+
+        rotateY(90deg);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:
+
+        perspective(1200px)
+
+        rotateY(0);
+
+        opacity:1;
+
+    }
+
+}
+.confetti-piece{
+
+    position:absolute;
+
+    width:10px;
+
+    height:16px;
+
+    animation:confettiFall 4s linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+    from{
+
+        transform:
+
+        translateY(-50px)
+
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(110vh)
+
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+.zoom-in{
+
+    animation:zoomIn .6s;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
