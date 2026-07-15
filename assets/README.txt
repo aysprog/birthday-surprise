@@ -1,0 +1,1 @@
+Add your own photos as photo1.jpg ... photo6.jpg
