@@ -59,7 +59,7 @@
                 <div class="corner top-left"></div>
                 <div class="corner bottom-right"></div>
                 <div class="giraffe">
-                    <img src="assets/giraffe.svg" alt="Cute Giraffe">
+                    <img src="/assets/giraffe.svg" alt="Cute Giraffe">
                 </div>
                 <h1>
                     Hey! ❤️
@@ -84,7 +84,7 @@
         <section class="page" id="question-page">
             <div class="paper-card">
                 <div class="giraffe-small">
-                    <img src="assets/giraffe.svg" alt="Giraffe">
+                    <img src="/assets/giraffe.svg" alt="Giraffe">
                 </div>
                 <h2>
                     Before we continue...
@@ -113,7 +113,7 @@
                 <div class="birthday-stars"></div>
                 <div class="birthday-photo">
                     <div class="photo-frame">
-                        <img src="assets/1" alt="Birthday">
+                        <img src="/assets/1" alt="Birthday">
                     </div>
                 </div>
                 <h1 class="birthday-title">
@@ -130,7 +130,7 @@
         <section class="page" id="cake-page">
             <div class="paper-card">
                 <div class="cake-container">
-                    <img src="assets/cake.svg" alt="Birthday Cake">
+                    <img src="/assets/cake.svg" alt="Birthday Cake">
                 </div>
                 <h2>
                     Make a Wish ✨
@@ -138,62 +138,100 @@
                 <p>
                     Close your eyes...
                     Make your biggest wish...
-                    Then press Continue.
-                </p>
+                    Then press Button.
+                </p><br>
                 <button class="next-btn" data-next="gift-page">
                     I Made My Wish ❤️
                 </button>
             </div>
         </section>
+
         <section class="page" id="gift-page">
+
             <div class="paper-card">
-                <h2>
-                    Choose a Gift 🎁
-                </h2>
-                <p>
-                    Every gift hides something special.
-                </p>
+
+                <h2>Choose a Gift 🎁</h2>
+
+                <p>Every gift hides something special.</p>
+
                 <div class="gift-grid">
-                    <div class="gift-box" data-gift="1">
-                        <img src="assets/gift1.svg" alt="Gift One">
-                        <span>
-                            Gift One
-                        </span>
+
+                    <!-- Gift 1 -->
+                    <div class="gift-box">
+
+                        <div class="gift-inner">
+
+                            <div class="gift-front">
+                                <img src="assets/gift1.svg" alt="Gift One">
+                                <span>Gift One</span>
+                            </div>
+
+                            <div class="gift-back">
+                                🎂<br><br>
+                                A giant birthday cake just for you!
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="gift-box" data-gift="2">
-                        <img src="assets/gift2.svg" alt="Gift Two">
-                        <span>
-                            Gift Two
-                        </span>
+
+                    <!-- Gift 2 -->
+                    <div class="gift-box">
+
+                        <div class="gift-inner">
+
+                            <div class="gift-front">
+                                <img src="assets/gift2.svg" alt="Gift Two">
+                                <span>Gift Two</span>
+                            </div>
+
+                            <div class="gift-back">
+                                🌸<br><br>
+                                Wishing you endless happiness and smiles.
+                            </div>
+
+                        </div>
+
                     </div>
-                    <div class="gift-box" data-gift="3">
-                        <img src="assets/gift3.svg" alt="Gift Three">
-                        <span>
-                            Gift Three
-                        </span>
+
+                    <!-- Gift 3 -->
+                    <div class="gift-box">
+
+                        <div class="gift-inner">
+
+                            <div class="gift-front">
+                                <img src="assets/gift3.svg" alt="Gift Three">
+                                <span>Gift Three</span>
+                            </div>
+
+                            <div class="gift-back">
+                                💖<br><br>
+                                Happy Birthday! Stay blessed forever.
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
-                <div class="gift-message">
-                    <h3>
-                        Surprise ❤️
-                    </h3>
-                    <p id="giftMessage">
-                        Click any gift to reveal it.
-                    </p>
+                <div class="next-area">
+
+                    <button class="next-btn" data-next="gallery-page">
+                        Continue →
+                    </button>
+
                 </div>
-                <button class="next-btn" data-next="gallery-page">
-                    Continue →
-                </button>
+
             </div>
+
+        </section>
         </section>
         <section class="page" id="gallery-page">
             <div class="paper-card large">
                 <h2>
                     Our Beautiful Memories 📸
                 </h2>
-                <p>
-                    Replace these pictures with your own.
-                </p>
+
                 <div class="gallery-grid">
                     <figure>
                         <img src="assets/photos/photo1.jpg" alt="Photo 1">
@@ -231,11 +269,25 @@
                 <div class="letter-body">
                     <p id="typewriterLetter">
                         Dear Friend,
+                        Happy Birthday! ❤️
+                        Today is all about celebrating you and the wonderful person you are.
+                        I just wanted to remind you how special you are and how much happiness you deserve. I hope this
+                        little website brings a smile to your face because every page was made with love and lots of
+                        good wishes.
+                        May this new year of your life be filled with beautiful memories, endless laughter, success in
+                        everything you do, and people who truly appreciate you.
+                        Whenever life gets difficult, always remember that you are stronger than you think, brighter
+                        than you know, and capable of achieving amazing things.
+                        Keep smiling, keep dreaming, and never stop being the kind-hearted person you are.
+                        Thank you for being a wonderful part of my life.
+                        Once again...
+                        🎉 Happy Birthday! 🎂
+                        May all your dreams come true and may every day ahead be as beautiful as today.
                     </p>
                     <div class="signature">
-                        ❤️ With Love
+                        ❤️ With Lots of Love
                     </div>
-                </div>
+                </div> <br>
                 <button class="next-btn" data-next="ending-page">
                     Continue →
                 </button>
@@ -251,16 +303,19 @@
                 <h1>
                     Happy Birthday!
                 </h1>
+                <br>
                 <p>
-                    I hope every moment of your life
-                    becomes more beautiful than today.
-                </p>
-                <p>
-                    Thank you for being such
-                    an amazing person.
+                    No matter where life takes you,
+                    I hope happiness always finds its way to you.
+                    
+                    May every dream you dream,
+                    every wish you make,
+                    and every step you take
+                    bring you closer to a life full of joy.
+                    Happy Birthday! ❤️🎂✨
                 </p>
                 <div class="ending-image">
-                    <img src="assets/giraffe.svg" alt="Cute Giraffe">
+                    <img src="/assets/giraffe.svg" alt="Cute Giraffe">
                 </div>
                 <button id="restartWebsite" class="primary-btn">
                     Watch Again
@@ -297,8 +352,8 @@
     </main>
     <script src="script.js"></script>
 
-<!---  <script src="js/gallery.js"></script>  
-    -->  
+    <!---  <script src="js/gallery.js"></script>  
+    -->
 
 </body>
 
